@@ -2,9 +2,13 @@ import "./index.scss";
 
 const Header = () => {
   return (
-    <div>
-      <h2>Organização</h2>
-      <h2>Tarefas</h2>
+    <div className="header">
+      <div className="header__div1">
+        <h2 className="header__div-organizacao">Organização</h2>
+      </div>
+      <div className="header__div2">
+        <h2 className="header__div-tarefas">Tarefas</h2>
+      </div>
     </div>
   );
 };

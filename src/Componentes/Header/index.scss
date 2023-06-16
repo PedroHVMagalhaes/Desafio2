@@ -1,4 +1,4 @@
-div{
+.header{
   width: 100%;
   height: 4rem;
   background-color: #0C70F2;
@@ -7,5 +7,27 @@ div{
   gap: 2rem;
   color: #FFFF;
   padding-left: 1rem;
-  padding-bottom: 0.1rem;
+  
+  &__div1{
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    width: 10rem;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  &__div2{
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #FFFF;
+    color: #0C70F2;
+    width: 8rem;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+  }
 }
