@@ -3,11 +3,12 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.scss";
+import { DB } from "./Mock/task.mock.js";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <App data={DB} />,
   },
 ]);
 
