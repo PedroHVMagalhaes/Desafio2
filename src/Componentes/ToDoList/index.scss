@@ -1,0 +1,68 @@
+.tftable{
+  width: 50%;
+
+  &__task{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+tr {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  &:nth-child(1) {
+    border-bottom: 2px solid white;
+  }
+}
+th {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 35px;
+  color: #FFFFFF;
+  padding: 2rem;
+  margin-top: 5rem;
+}
+td {
+  padding: 1rem;
+  width: 4rem;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 29px;
+  color: #FFFFFF;
+  width: 6rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  align-items: center;
+  }
+
+.icones{
+  display: flex;
+  gap: 1rem;
+}
+
+input[type="checkbox"] {
+  all: unset;
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #FFFFFF;
+  &:checked{
+    background-image: url("./checkboxDone.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+}
+
+img{
+  cursor: pointer;
+}
