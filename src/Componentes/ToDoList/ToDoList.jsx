@@ -6,9 +6,20 @@ import "./index.scss";
 const ToDoList = ({ data }) => {
   const [openModal, setOpenModal] = useState(false);
   const [openModalDelete, setOpenModalDelete] = useState(false);
+
+  const closeModal = () => {
+    setOpenModal(false);
+    setOpenModalDelete(false);
+  };
+
   return (
     <div>
-      <table className="tftable">
+      <table
+        className="tftable"
+        style={{
+          display: openModal || openModalDelete ? "none" : "table",
+        }}
+      >
         <thead>
           <tr className="tftable__task">
             <th>Tarefa</th>
@@ -21,7 +32,7 @@ const ToDoList = ({ data }) => {
             <tr className="tftable__task">
               <td>{task.title}</td>
               <td>
-                <input type="checkbox" />
+                <input type="checkbox" checked={task.completed} />
               </td>
               <td className="icones">
                 <img
@@ -40,8 +51,8 @@ const ToDoList = ({ data }) => {
         ))}
       </table>
       <div>
-        <ModalEdit isOpen={openModal} />
-        <ModalDelete isOpenDelete={openModalDelete} />
+        <ModalEdit isOpen={openModal} onClose={closeModal} />
+        <ModalDelete isOpenDelete={openModalDelete} onClose={closeModal} />
       </div>
     </div>
   );
