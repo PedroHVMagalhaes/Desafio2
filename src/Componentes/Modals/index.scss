@@ -1,0 +1,56 @@
+.modalContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;
+  margin: 4rem;
+  height: 40vh;
+  background-color: #FFFFFF;
+
+  &__title{
+    margin: 2rem;
+  }
+
+  p{
+    color: #000;
+    font-size: 0.9rem;
+    font-family: "Raleway";
+  }
+
+  &__content{
+    margin: 2rem;
+  }
+
+  &__buttons{
+    display: flex;
+    gap: 2rem;
+  }
+
+  .no{ 
+      margin-top: 4rem;
+      width: 9rem;
+      height: 3rem;
+      border-radius: 10px;
+      border: none;
+      color: #FFFFFF;
+      background-color: #0C70F2;
+      color: #FFF;
+      font-size: 1rem;
+      font-family: "Raleway";
+      font-weight: 600;
+      cursor: pointer;
+  }
+
+  .yes{
+    margin-top: 4rem;
+    width: 9rem;
+    height: 3rem;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background-color: #FFF;
+    font-size: 1rem;
+    font-family: "Raleway";
+    font-weight: 600;
+    cursor: pointer;
+  }
+}

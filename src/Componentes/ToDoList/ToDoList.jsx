@@ -50,10 +50,8 @@ const ToDoList = ({ data }) => {
           </tbody>
         ))}
       </table>
-      <div>
-        <ModalEdit isOpen={openModal} onClose={closeModal} />
-        <ModalDelete isOpenDelete={openModalDelete} onClose={closeModal} />
-      </div>
+      <ModalEdit isOpen={openModal} onClose={closeModal} />
+      <ModalDelete isOpenDelete={openModalDelete} onClose={closeModal} />
     </div>
   );
 };
