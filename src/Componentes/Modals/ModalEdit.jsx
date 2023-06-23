@@ -1,11 +1,11 @@
 import "./index.scss";
 
-const ModalEdit = ({ isOpen, onClose }) => {
+const ModalEdit = ({ isOpen, onClose, TaskDescription }) => {
   if (isOpen) {
     return (
       <div className="modalContainer">
         <h1 className="modalContainer__title">Deseja editar esse item?</h1>
-        <p>Colocar as descrições das tarefas aqui.</p>
+        <p>{TaskDescription}</p>
         <div className="modalContainer__buttons">
           <button className="no" onClick={onClose}>
             Não

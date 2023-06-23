@@ -6,10 +6,21 @@ import "./index.scss";
 const ToDoList = ({ data }) => {
   const [openModal, setOpenModal] = useState(false);
   const [openModalDelete, setOpenModalDelete] = useState(false);
+  const [openDescription, setOpenDescription] = useState("");
 
   const closeModal = () => {
     setOpenModal(false);
     setOpenModalDelete(false);
+  };
+
+  const psModalEdit = (description) => {
+    setOpenDescription(description);
+    setOpenModal(true);
+  };
+
+  const psModalDelete = (description) => {
+    setOpenDescription(description);
+    setOpenModalDelete(true);
   };
 
   return (
@@ -38,20 +49,28 @@ const ToDoList = ({ data }) => {
                 <img
                   src="./editar.svg"
                   height="20rem"
-                  onClick={() => setOpenModal(true)}
+                  onClick={() => psModalEdit(task.description)}
                 />
                 <img
                   src="./lixeira.svg"
                   height="20rem"
-                  onClick={() => setOpenModalDelete(true)}
+                  onClick={() => psModalDelete(task.description)}
                 />
               </td>
             </tr>
           </tbody>
         ))}
       </table>
-      <ModalEdit isOpen={openModal} onClose={closeModal} />
-      <ModalDelete isOpenDelete={openModalDelete} onClose={closeModal} />
+      <ModalEdit
+        isOpen={openModal}
+        onClose={closeModal}
+        TaskDescription={openDescription}
+      />
+      <ModalDelete
+        isOpenDelete={openModalDelete}
+        onClose={closeModal}
+        TaskDescription={openDescription}
+      />
     </div>
   );
 };
