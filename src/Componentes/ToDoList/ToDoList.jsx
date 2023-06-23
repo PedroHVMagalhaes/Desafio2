@@ -47,12 +47,12 @@ const ToDoList = ({ data }) => {
               </td>
               <td className="icones">
                 <img
-                  src="./editar.svg"
+                  src="./public/editar.svg"
                   height="20rem"
                   onClick={() => psModalEdit(task.description)}
                 />
                 <img
-                  src="./lixeira.svg"
+                  src="./public/lixeira.svg"
                   height="20rem"
                   onClick={() => psModalDelete(task.description)}
                 />
