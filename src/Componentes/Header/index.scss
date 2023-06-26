@@ -16,18 +16,19 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
+    cursor: pointer;
   }
+}
 
-  &__div2{
-    display: flex;
+.header__div1:hover{
+  display: flex;
     justify-content: center;
     padding: 0.5rem;
     border-radius: 10px 10px 0px 0px;
     background-color: #FFFF;
     color: #0C70F2;
-    width: 8rem;
+    width: 10rem;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-  }
 }
