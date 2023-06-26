@@ -7,7 +7,10 @@ const ModalDelete = ({ isOpenNewTask, onClose }) => {
         <h1 className="modalContainer__title">
           Deseja adicionar uma atividade?
         </h1>
-        <input placeholder="Adicione a tarefa"></input>
+        <input
+          className="modalContainer__addTask"
+          placeholder="Adicione a tarefa"
+        ></input>
         <div className="modalContainer__buttons">
           <button className="no" onClick={onClose}>
             Não
