@@ -13,7 +13,7 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/",
+    path: "/sobre",
     element: <Sobre />,
   },
 ]);
