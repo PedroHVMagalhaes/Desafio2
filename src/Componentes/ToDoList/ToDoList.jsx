@@ -1,16 +1,19 @@
 import { useState } from "react";
 import ModalDelete from "../Modals/ModalDelete";
 import ModalEdit from "../Modals/ModalEdit";
+import ModalAdd from "../Modals/ModalAdd";
 import "./index.scss";
 
 const ToDoList = ({ data }) => {
   const [openModal, setOpenModal] = useState(false);
   const [openModalDelete, setOpenModalDelete] = useState(false);
+  const [openNewTask, setOpenNewTask] = useState(false);
   const [openDescription, setOpenDescription] = useState("");
 
   const closeModal = () => {
     setOpenModal(false);
     setOpenModalDelete(false);
+    setOpenNewTask(false);
   };
 
   const psModalEdit = (description) => {
@@ -23,12 +26,17 @@ const ToDoList = ({ data }) => {
     setOpenModalDelete(true);
   };
 
+  const modalAddTask = () => {
+    setOpenNewTask(true);
+  };
+
   return (
     <div>
       <table
         className="tftable"
         style={{
-          display: openModal || openModalDelete ? "none" : "table",
+          display:
+            openModal || openModalDelete || openNewTask ? "none" : "table",
         }}
       >
         <thead>
@@ -60,6 +68,14 @@ const ToDoList = ({ data }) => {
             </tr>
           </tbody>
         ))}
+        <tbody>
+          <tr className="newTask">
+            <td>Nova Tarefa</td>
+            <td className="newTask__add" onClick={() => modalAddTask()}>
+              +
+            </td>
+          </tr>
+        </tbody>
       </table>
       <ModalEdit
         isOpen={openModal}
@@ -71,6 +87,8 @@ const ToDoList = ({ data }) => {
         onClose={closeModal}
         TaskDescription={openDescription}
       />
+
+      <ModalAdd isOpenNewTask={openNewTask} onClose={closeModal} />
     </div>
   );
 };

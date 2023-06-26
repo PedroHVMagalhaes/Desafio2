@@ -66,3 +66,13 @@ input[type="checkbox"] {
 img{
   cursor: pointer;
 }
+
+.newTask{
+  display: flex;
+  justify-content: space-between;
+
+  &__add{
+    font-size: 50px;
+    cursor: pointer;
+  }
+}
