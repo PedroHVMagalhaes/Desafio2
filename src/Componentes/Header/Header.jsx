@@ -12,7 +12,7 @@ const Header = () => {
       </div>
       <div className="header__div1">
         <h2 className="header__div-sobre">
-          <Link to={"/sobre"}>Sobre</Link>
+          <Link to={"/Sobre"}>Sobre</Link>
         </h2>
       </div>
     </div>
