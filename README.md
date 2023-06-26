@@ -42,3 +42,6 @@ O pojeto proposto foi a criação de um To Do List
 1. Inicie o servidor de desenvolvimento: `npm run dev`
 2. Acesse a aplicação no navegador: `http://localhost:XXXX (porta será mostrada no terminal)`
 
+## Deploy
+https://desafio3dnc.netlify.app/
+
