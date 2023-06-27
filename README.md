@@ -9,11 +9,18 @@
 
 ## Descrição
 
+*Versão 1.0.0
+
 O projeto faz parte do desafio 3 da Escola DNC, que consiste em desenvolver uma espécie de "To Do List" em que tem como funcionalidades <br/>
 criar modais ao clicar sobre os ícones de editar e deletar, adicionei também a funcionalidade de fechar o modal ao clicar no botão "não" no modal.
 
 O pojeto proposto foi a criação de um To Do List
 (https://www.figma.com/file/yFT1qGLCqFZ636EhVfmuEd/Untitled?node-id=1%3A2&mode=dev).
+
+*Versão 1.1.0
+
+- Foi adiionado na tabela o "Nova Tarefa" com a funcionalidade de abrir um modal.
+- Adicionado a página Sobre no Header contendo informações sobre autor do projeto.
 
 ## Tecnologias Utilizadas
 
@@ -22,6 +29,7 @@ O pojeto proposto foi a criação de um To Do List
 - Sass
 
 ## Estrutura do Projeto
+*Versão 1.0.0
 
 - `index.scss`: Arquivo de estilização principal.
 - `componentes/Header/Header.js`: Componente de cabeçalho da página.
@@ -30,6 +38,9 @@ O pojeto proposto foi a criação de um To Do List
 - `componentes/ToDoList/ToDoList.jsx`: Componente que exibe a tabela de tarefas.
 - `App.jsx`: Página inicial do sistema.
 - `mock/task.mock.js`: Mock de dados das tarefas.
+
+*Versão 1.1.0
+- `componentes/Pages/Sobre/Sobre.jsx`: Componente da página Sobre.
 
 ## Instalação
 
